@@ -10,34 +10,34 @@ using System.Windows.Forms;
 
 namespace DigitalDiary
 {
-    public partial class homePage : Form
+    public partial class Registration : Form
     {
-        public homePage()
+        public Registration()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void homePage_FormClosing(object sender, FormClosingEventArgs e)
+        private void Registration_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }
