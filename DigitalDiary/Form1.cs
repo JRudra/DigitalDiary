@@ -39,6 +39,11 @@ namespace DigitalDiary
 
         private void homePage_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void signUpLinkLabel_Click(object sender, EventArgs e)
+        {
 
         }
     }

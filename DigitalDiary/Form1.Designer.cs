@@ -106,6 +106,7 @@
             this.signUpLinkLabel.TabIndex = 6;
             this.signUpLinkLabel.TabStop = true;
             this.signUpLinkLabel.Text = "Sign Up";
+            this.signUpLinkLabel.Click += new System.EventHandler(this.signUpLinkLabel_Click);
             // 
             // textLabel
             // 

@@ -39,7 +39,15 @@ namespace DigitalDiary
 
         private void Registration_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void returnButton_Click(object sender, EventArgs e)
+        {
 
         }
+    }
+
+      
     }
 }
