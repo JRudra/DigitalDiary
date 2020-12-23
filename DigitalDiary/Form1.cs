@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DigitalDiary;
 
 namespace DigitalDiary
 {
@@ -17,9 +18,11 @@ namespace DigitalDiary
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form3 ft = new Form3();
+            ft.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,7 +47,9 @@ namespace DigitalDiary
 
         private void signUpLinkLabel_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Registration ab = new Registration();
+            ab.Show();
         }
     }
 }

@@ -214,6 +214,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // returnButton
             // 
@@ -249,7 +250,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Registration";
-            this.Text = "``";
+            this.Text = "Registration";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Registration_FormClosing);
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
