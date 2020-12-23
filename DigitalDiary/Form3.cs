@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace DigitalDiary
 {
@@ -27,8 +28,8 @@ namespace DigitalDiary
         private void button2_Click(object sender, EventArgs e)
         {
             //SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["DigitalDiary"].ConnectionString);
-            //connection1.Open();
-            //SqlCommand cmd = new SqlCommand(@"INSERT INTO DiaryLogs (Username,Date,Entry,Importance) 
+           // connection1.Open();
+           // SqlCommand cmd = new SqlCommand(@"INSERT INTO DiaryLogs (Username,Date,Entry,Importance) 
 //VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Text + "','" + comboBox1.Text + "')", connection1);
 
             //cmd.ExecuteNonQuery();
