@@ -51,6 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DigitalDiaryDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DigitalDiaryDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DigitalDiaryDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +104,17 @@
     </None>
     <None Include="DigitalDiaryDataSet.xss">
       <DependentUpon>DigitalDiaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DigitalDiaryDataSet1.xsc">
+      <DependentUpon>DigitalDiaryDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DigitalDiaryDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DigitalDiaryDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DigitalDiaryDataSet1.xss">
+      <DependentUpon>DigitalDiaryDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

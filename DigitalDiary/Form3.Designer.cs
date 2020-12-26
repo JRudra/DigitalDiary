@@ -53,10 +53,17 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.importanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.digitalDiaryDataSet1 = new DigitalDiary.DigitalDiaryDataSet1();
+            this.diaryLogsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.diaryLogsTableAdapter1 = new DigitalDiary.DigitalDiaryDataSet1TableAdapters.DiaryLogsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.digitalDiaryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaryLogsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.digitalDiaryDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diaryLogsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -177,7 +184,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 16;
-            this.button1.Text = "Create";
+            this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -195,9 +202,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Location = new System.Drawing.Point(558, 149);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(162, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -213,7 +222,7 @@
             this.dateDataGridViewTextBoxColumn,
             this.entryDataGridViewTextBoxColumn,
             this.importanceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.diaryLogsBindingSource;
+            this.dataGridView1.DataSource = this.diaryLogsBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(35, 358);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -272,11 +281,45 @@
             this.importanceDataGridViewTextBoxColumn.Name = "importanceDataGridViewTextBoxColumn";
             this.importanceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(550, 332);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(186, 20);
+            this.textBox3.TabIndex = 32;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(697, 271);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 33;
+            this.button5.Text = "Add";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // digitalDiaryDataSet1
+            // 
+            this.digitalDiaryDataSet1.DataSetName = "DigitalDiaryDataSet1";
+            this.digitalDiaryDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // diaryLogsBindingSource1
+            // 
+            this.diaryLogsBindingSource1.DataMember = "DiaryLogs";
+            this.diaryLogsBindingSource1.DataSource = this.digitalDiaryDataSet1;
+            // 
+            // diaryLogsTableAdapter1
+            // 
+            this.diaryLogsTableAdapter1.ClearBeforeFill = true;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 656);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
@@ -301,6 +344,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.digitalDiaryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaryLogsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.digitalDiaryDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.diaryLogsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +377,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn entryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn importanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button5;
+        private DigitalDiaryDataSet1 digitalDiaryDataSet1;
+        private System.Windows.Forms.BindingSource diaryLogsBindingSource1;
+        private DigitalDiaryDataSet1TableAdapters.DiaryLogsTableAdapter diaryLogsTableAdapter1;
     }
 }
