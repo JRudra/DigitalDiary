@@ -14,6 +14,7 @@ namespace DigitalDiary
 {
     public partial class Form3 : Form
     {
+        SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["DigitalDiary"].ConnectionString);
         public Form3()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace DigitalDiary
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["DigitalDiary"].ConnectionString);
+            //SqlConnection connection1 = new SqlConnection(ConfigurationManager.ConnectionStrings["DigitalDiary"].ConnectionString);
             connection1.Open();
             SqlCommand cmd = new SqlCommand(@"INSERT INTO DiaryLogs (Username,Date,Entry,Importance) 
 VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Text + "','" + comboBox1.Text + "')", connection1);
@@ -39,6 +40,7 @@ VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Tex
             string message = "Log added successfully";
             string title = "Confirmation";
             MessageBox.Show(message, title);
+            this.diaryLogsTableAdapter.Fill(this.digitalDiaryDataSet.DiaryLogs);
 
         }
 
@@ -64,7 +66,12 @@ VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Tex
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            connection1.Open();
+            SqlCommand cmd = new SqlCommand(@"DELETE FROM DiaryLogs WHERE (Username = '" + textBox1.Text + "')", connection1);
+            cmd.ExecuteNonQuery();
+            connection1.Close();
+            MessageBox.Show("Deleted Successfully!");
+            this.diaryLogsTableAdapter.Fill(this.digitalDiaryDataSet.DiaryLogs);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,6 +85,19 @@ VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Tex
             dateTimePicker1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             comboBox1.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            connection1.Open();
+            SqlCommand cmd = new SqlCommand(@"UPDATE DiaryLogs SET Username='"+textBox1.Text+"',Date='"+ dateTimePicker1.Text + "',Entry ='"+ textBox2.Text + "',Importance ='"+ comboBox1.Text + "'WHERE (Username = '" + textBox1.Text + "')", connection1); ;
+
+            cmd.ExecuteNonQuery();
+            connection1.Close();
+
+            string message = "Log modified successfully";
+            string title = "Confirmation";
+            MessageBox.Show(message, title);
         }
     }
     
