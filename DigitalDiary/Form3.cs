@@ -51,13 +51,7 @@ VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Tex
 
         }
 
-        //void Display()
-        //{
-           // SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM DiaryLogs", connection1);
-           // DataTable dt = new DataTable();
-           // sda.Fill(dt);
-
-       // }
+ 
 
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -94,6 +88,7 @@ VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Tex
             dateTimePicker1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             textBox2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
             comboBox1.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)

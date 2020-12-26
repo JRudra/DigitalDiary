@@ -222,7 +222,7 @@
             this.dateDataGridViewTextBoxColumn,
             this.entryDataGridViewTextBoxColumn,
             this.importanceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.diaryLogsBindingSource1;
+            this.dataGridView1.DataSource = this.diaryLogsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(35, 358);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
