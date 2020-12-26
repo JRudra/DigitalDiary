@@ -98,6 +98,7 @@ VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Tex
             string message = "Log modified successfully";
             string title = "Confirmation";
             MessageBox.Show(message, title);
+            this.diaryLogsTableAdapter.Fill(this.digitalDiaryDataSet.DiaryLogs);
         }
     }
     
