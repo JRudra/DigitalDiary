@@ -68,15 +68,15 @@ namespace DigitalDiary
             }
             else
                 gen = radioButton3.Text;
-            string sql = "INSERT INTO Users(Name,Username,Password,DateOfBirth,Gender,BloodGroup) VALUES('"+ textBox1.Text +"','"+ textBox2.Text+ "','"+ textBox3.Text + "','"+ dateTimePicker1.Text + "','"+gen+"','"+comboBox1.Text+"')";
-            SqlCommand command = new SqlCommand(sql, connection);
-            int result=command.ExecuteNonQuery();
-            if (result > 0)
-            {
-                MessageBox.Show("Signing up Successful");
-            }
-            else
-                MessageBox.Show("Error in signing up");
+            SqlCommand command = new SqlCommand(@"INSERT INTO Users(Name,Username,Password,DateOfBirth,Gender,BloodGroup) VALUES('" + textBox1.Text +"','"+ textBox2.Text+ "','"+ textBox3.Text + "','"+ dateTimePicker1.Text + "','"+gen+"','"+comboBox1.Text+"')",connection);
+           //SqlCommand command = new SqlCommand(sql, connection);
+            //int result=command.ExecuteNonQuery();
+            //if (result > 0)
+            //{
+                //MessageBox.Show("Signing up Successful");
+            //}
+            //else
+               // MessageBox.Show("Error in signing up");
         }
     }
 

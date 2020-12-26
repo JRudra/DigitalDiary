@@ -42,9 +42,42 @@ VALUES ('" + textBox1.Text + "','" + dateTimePicker1.Text + "','" + textBox2.Tex
 
         }
 
+        //void Display()
+        //{
+           // SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM DiaryLogs", connection1);
+           // DataTable dt = new DataTable();
+           // sda.Fill(dt);
+
+       // }
+
         private void Form3_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'digitalDiaryDataSet.DiaryLogs' table. You can move, or remove it, as needed.
+            this.diaryLogsTableAdapter.Fill(this.digitalDiaryDataSet.DiaryLogs);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            dateTimePicker1.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            textBox2.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            comboBox1.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
         }
     }
     
