@@ -48,6 +48,8 @@ namespace DigitalDiary
         private void returnButton_Click(object sender, EventArgs e)
         {
             homePage f1 = new homePage();
+            this.Hide();
+            f1.Show();
 
 
         }
@@ -68,7 +70,7 @@ namespace DigitalDiary
             }
             else
                 gen = radioButton3.Text;
-            SqlCommand command = new SqlCommand(@"INSERT INTO Users(Name,Username,Password,DateOfBirth,Gender,BloodGroup) VALUES('" + textBox1.Text +"','"+ textBox2.Text+ "','"+ textBox3.Text + "','"+ dateTimePicker1.Text + "','"+gen+"','"+comboBox1.Text+"')",connection);
+            SqlCommand command = new SqlCommand(@"INSERT INTO Users(Name,UserName,Password,DateOfBirth,Gender,BloodGroup) VALUES('" + textBox1.Text +"','"+ textBox2.Text+ "','"+ textBox3.Text + "','"+ dateTimePicker1.Text + "','"+gen+"','"+comboBox1.Text+"')",connection);
             command.ExecuteNonQuery();
             connection.Close();
             string message = "Registration successful";
